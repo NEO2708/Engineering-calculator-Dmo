@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        a {
+            width: 30vh;
+            height: 60px;
+            background-color: #0372fb;
+            margin-top: 20px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 3vw;
+            color: white;
+            text-decoration: none;
+        }
+
+        h3,
+        span {
+            color: #0372fb;
+            font-weight: 500;
+            font-size: xx-large;
+        }
+
+        .calculator {
+            margin-top: 10px;
+            width: 500px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+        }
+
+        .calculator input[type="text"] {
+            display: block;
+            width: 480px;
+            padding: 10px;
+            font-size: 50px;
+            border: none;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .calculator .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #eee;
+        }
+
+        .calculator button {
+            margin: 5px;
+            padding: 10px;
+            width: calc(16% - -22px);
+            border: none;
+            border-radius: 5px;
+            background-color: #4898fa;
+            font-size: 40px;
+            cursor: pointer;
+            transition: all .2s ease-in-out;
+            color: aliceblue;
+
+        }
+
+        .calculator button:hover {
+            background-color: #0372fb;
+        }
+
+        @media (max-width:660px) {
+
+            h3,
+            span {
+                color: #0372fb;
+                font-weight: 500;
+                font-size: x-large;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Simple Engineering calculator Demo</h3>
+    <span>By freelancer: Priyanshu C</span>
+    <div class="calculator">
+        <input type="text" id="result" placeholder="0" disabled>
+        <div class="buttons">
+            <button onclick="clearAll()">C</button>
+            <button onclick="erase()">&larr;</button>
+            <button onclick="operation('sqrt')">√</button>
+            <button style=" background-color: orange;" onclick="operation('power')">x^y</button>
+            <button onclick="input('7')">7</button>
+            <button onclick="input('8')">8</button>
+            <button onclick="input('9')">9</button>
+            <button style=" background-color: orange;" onclick="operation('/')">/</button>
+            <button onclick="input('4')">4</button>
+            <button onclick="input('5')">5</button>
+            <button onclick="input('6')">6</button>
+            <button style=" background-color: orange;" onclick="operation('*')">x</button>
+            <button onclick="input('1')">1</button>
+            <button onclick="input('2')">2</button>
+            <button onclick="input('3')">3</button>
+            <button style=" background-color: orange;" onclick="operation('-')">-</button>
+            <button onclick="input('0')">0</button>
+            <button onclick="input('.')">.</button>
+            <button onclick="operation('sin')">sin</button>
+            <button style=" background-color: orange;" onclick="operation('+')">+</button>
+            <button onclick="operation('cos')">cos</button>
+            <button onclick="operation('tan')">tan</button>
+            <button onclick="operation('log')">log</button>
+            <button style=" background-color: orange;" onclick="operation('pi')">π</button>
+            <button onclick="operation('e')">e</button>
+            <button style=" background-color: orange;" onclick="operation('=')">=</button>
+        </div>
+    </div>
+    <a href="area.html"> Area calculator</a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
